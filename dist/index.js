@@ -370,7 +370,7 @@ function createIssue(branch, commitAge, lastCommitter, daysBeforeDelete, staleBr
         const issueTitleString = (0, create_issues_title_string_1.createIssueTitleString)(branch);
         switch (tagLastCommitter) {
             case true:
-                bodyString = `@${lastCommitter}, \r \r ${branch} has had no activity for ${commitAge.toString()} days. \r \r This branch will be automatically deleted in ${daysUntilDelete.toString()} days.`;
+                bodyString = `@${lastCommitter}, \r \r ${branch} has had no activity for ${commitAge.toString()} days. \r \r This branch will be automatically deleted in ${daysUntilDelete.toString()} days. Please either make a commit and resolve this issue or delete the branch and resolve the issue.`;
                 break;
             case false:
                 bodyString = `${branch} has had no activity for ${commitAge.toString()} days. \r \r This branch will be automatically deleted in ${daysUntilDelete.toString()} days.`;
