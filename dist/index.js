@@ -370,10 +370,10 @@ function createIssue(branch, commitAge, lastCommitter, daysBeforeDelete, staleBr
         const issueTitleString = (0, create_issues_title_string_1.createIssueTitleString)(branch);
         switch (tagLastCommitter) {
             case true:
-                bodyString = `@${lastCommitter}, \r \r ${branch} has had no activity for ${commitAge.toString()} days. \r \r This branch will be automatically deleted in ${daysUntilDelete.toString()} days. Please either make a commit and resolve this issue or delete the branch and resolve the issue.`;
+                bodyString = `@${lastCommitter}, \r \r ${branch} has had no activity for ${commitAge.toString()} days. \r \r This branch will be automatically deleted in ${daysUntilDelete.toString()} days. Please either make a commit and resolve this issue or delete the branch and resolve the issue2.`;
                 break;
             case false:
-                bodyString = `${branch} has had no activity for ${commitAge.toString()} days. \r \r This branch will be automatically deleted in ${daysUntilDelete.toString()} days.`;
+                bodyString = `${branch} has had no activity for ${commitAge.toString()} days. \r \r This branch will be automatically deleted in ${daysUntilDelete.toString()} days. test4`;
                 break;
         }
         try {
@@ -1532,10 +1532,10 @@ function createCommentString(branch, lastCommitter, commitAge, daysBeforeDelete,
     let bodyString;
     switch (tagLastCommitter) {
         case true:
-            bodyString = `@${lastCommitter}, \r \r ${branch} has had no activity for ${commitAge.toString()} days. \r \r This branch will be automatically deleted in ${daysUntilDelete.toString()} days. \r \r This issue was last updated on ${new Date().toString()}`;
+            bodyString = `@${lastCommitter}, \r \r ${branch} has had no activity for ${commitAge.toString()} days. \r \r This branch will be automatically deleted in ${daysUntilDelete.toString()} days. \r \r Please make a commit and close this issue or delete the branch and close this issue. \r \r This issue was last updated on ${new Date().toString()}`;
             break;
         case false:
-            bodyString = `${branch} has had no activity for ${commitAge.toString()} days. \r \r This branch will be automatically deleted in ${daysUntilDelete.toString()} days. \r \r This issue was last updated on ${new Date().toString()}`;
+            bodyString = `${branch} has had no activity for ${commitAge.toString()} days. \r \r This branch will be automatically deleted in ${daysUntilDelete.toString()} days. \r \r Please make a commit and close this issue or delete the branch and close this issue1. \r \r This issue was last updated on ${new Date().toString()}`;
             break;
     }
     return bodyString;
